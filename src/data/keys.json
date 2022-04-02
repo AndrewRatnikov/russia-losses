@@ -1,0 +1,79 @@
+{
+  "keys": [
+    {
+      "id": "date",
+      "nameEn": "date",
+      "nameUa": "дата"
+    },
+    {
+      "id": "personnel",
+      "nameEn": "personnel",
+      "nameUa": "особового складу"
+    },
+    {
+      "id": "tanks",
+      "nameEn": "tanks",
+      "nameUa": "танків"
+    },
+    {
+      "id": "apv",
+      "nameEn": "APV",
+      "nameUa": "бойових броньованих машин"
+    },
+    {
+      "id": "artillerySystems",
+      "nameEn": "artillery systems",
+      "nameUa": "артилерійських систем"
+    },
+    {
+      "id": "mlrs",
+      "nameEn": "MLRS",
+      "nameUa": "РСЗВ"
+    },
+    {
+      "id": "aaws",
+      "nameEn": "Anti-aircraft warfare systems",
+      "nameUa": "засоби ППО"
+    },
+    {
+      "id": "aircraft",
+      "nameEn": "aircraft",
+      "nameUa": "літаків"
+    },
+    {
+      "id": "helicopters",
+      "nameEn": "helicopters",
+      "nameUa": "гелікоптерів"
+    },
+    {
+      "id": "vehicles",
+      "nameEn": "vehicles",
+      "nameUa": "автомобільної техніки"
+    },
+    {
+      "id": "boatsCutters",
+      "nameEn": "boats / cutters",
+      "nameUa": "кораблі / катери"
+    },
+    {
+      "id": "fuelTanks",
+      "nameEn": "fuel tanks",
+      "nameUa": "цистерн з ПММ"
+    },
+    {
+      "id": "uav",
+      "nameEn": "UAV operational-tactical level",
+      "nameUa": "БПЛА оперативно-тактичного рівня"
+    },
+    {
+      "id": "specialEquipment",
+      "nameEn": "special equipment",
+      "nameUa": "Спеціальна техніка"
+    },
+    {
+      "id": "srbmSystem",
+      "nameEn": "mobile SRBM system",
+      "nameUa": "Пускові установки ОТРК/ТРК"
+    }
+  ]
+}
