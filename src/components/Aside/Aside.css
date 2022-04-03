@@ -1,0 +1,8 @@
+.card {
+  list-style: none;
+  font-family: "Allerta Stencil", sans-serif;
+  margin: 1em 0.5em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background-color: #191919;
+}
