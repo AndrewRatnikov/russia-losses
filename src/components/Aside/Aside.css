@@ -1,8 +1,30 @@
 .card {
   list-style: none;
+  font-size: 0.9em;
   font-family: "Allerta Stencil", sans-serif;
   margin: 1em 0.5em;
   border-radius: 0.5em;
   padding: 0.5em;
-  background-color: #191919;
+  background-color: #4d4d4d;
+}
+
+.card-item {
+  padding: 0.5em 0.25em;
+  cursor: pointer;
+}
+
+.card-item.active {
+  background-color: #333;
+}
+
+.card-item:hover {
+  background-color: #000;
+}
+
+.card-item:first-of-type {
+  pointer-events: none;
+}
+
+.card-item > span {
+  color: #4c9a2a;
 }
