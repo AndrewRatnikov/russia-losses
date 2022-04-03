@@ -1,0 +1,17 @@
+.app {
+  min-height: 100vh;
+  color: white;
+  background-color: black;
+}
+
+.header {
+  width: 100vw;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.header > h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 1em 0;
+}

@@ -1,13 +1,15 @@
-import React from 'react';
+import Main from "./Container";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
+    <div className="app">
+      <header className="header">
+        <h1>Combat losses of the enemy</h1>
       </header>
+
+      <Main />
     </div>
   );
 }
