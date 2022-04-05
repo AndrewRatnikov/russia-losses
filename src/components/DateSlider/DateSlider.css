@@ -1,0 +1,18 @@
+.date-slider {
+  padding: 0.5em 0.25em;
+}
+
+.date-slider > span:first-of-type {
+  color: #4c9a2a;
+}
+
+.date-slider-arrow {
+  display: inline-block;
+  padding: 0 0.5em;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.date-slider-arrow:hover {
+  color: #4c9a2a;
+}

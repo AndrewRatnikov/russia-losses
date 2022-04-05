@@ -21,10 +21,6 @@
   background-color: #000;
 }
 
-.card-item:first-of-type {
-  pointer-events: none;
-}
-
 .card-item > span {
   color: #4c9a2a;
 }
