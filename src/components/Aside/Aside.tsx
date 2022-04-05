@@ -12,8 +12,8 @@ const Aside = () => {
   const [active, setActive] = useState("personnel");
   const [activeIndex, setActiveIndex] = useState(0);
   const keys = keyData.keys.slice(1);
-  const activeData: { [key: string]: string | number | null } =
-    data.data[activeIndex];
+  const activeDataItem: DataItem = data.data[activeIndex];
+  const prevDataItem: DataItem = data.data[activeIndex + 1];
 
   const onClickHandler = (id: string) => () => {
     setActive(id);
@@ -33,12 +33,27 @@ const Aside = () => {
             className={`card-item ${active === key.id ? "active" : ""}`}
             onClick={onClickHandler(key.id)}
           >
-            <span>{key.nameEn}:</span> {activeData[key.id]}
+            <span>{key.nameEn}:</span>{" "}
+            {activeDataItem[key.id] ? activeDataItem[key.id] : "-"}{" "}
+            {!!prevDataItem &&
+            activeDataItem[key.id] &&
+            prevDataItem[key.id] &&
+            (activeDataItem[key.id] as number) -
+              (prevDataItem[key.id] as number)
+              ? `(+${
+                  (activeDataItem[key.id] as number) -
+                  (prevDataItem[key.id] as number)
+                })`
+              : null}
           </li>
         ))}
       </ul>
     </aside>
   );
 };
+
+interface DataItem {
+  [key: string]: string | number | null;
+}
 
 export default Aside;

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./DateSlider.css";
 
 const DateSlider = ({ dates, active, setActive }: DateSliderProps) => {
@@ -10,7 +8,6 @@ const DateSlider = ({ dates, active, setActive }: DateSliderProps) => {
   const nextClickHandler = () => {
     setActive(active - 1);
   };
-  console.log(active);
 
   return (
     <li key={dates[0]} className="date-slider">
