@@ -1,10 +1,10 @@
 import { useRef, useEffect } from "react";
-import d3 from "d3";
+import * as d3 from "d3";
 
 const useD3 = (
-  fn: (node: d3.Selection<HTMLElement, null, null, undefined>) => void
+  fn: (node: d3.Selection<any, null, null, undefined>) => void
 ) => {
-  const ref = useRef<HTMLElement>();
+  const ref = useRef<any>();
 
   useEffect(() => {
     if (ref.current) {
