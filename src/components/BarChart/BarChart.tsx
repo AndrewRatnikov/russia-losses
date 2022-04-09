@@ -30,10 +30,11 @@ const BarChart = ({ data, active }: BarChartProps) => {
     if (svg.selectAll("g").nodes().length) {
       svg.selectAll("g");
     } else {
-      svg.append("g").attr("class", "bars").attr("fill", "white");
+      svg.append("g").attr("class", "bars");
     }
 
     svg
+      .attr("fill", "white")
       .selectAll("rect")
       .data(data)
       .join("rect")

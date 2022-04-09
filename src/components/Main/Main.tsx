@@ -4,7 +4,7 @@ import data from "../../data/data.json";
 import { ActiveItem } from "../Container/Container";
 
 const Main = ({ activeItem }: { activeItem: ActiveItem }) => {
-  const transformedData = transformData(data.data);
+  const transformedData = transformData(data.data).reverse();
 
   return (
     <main>
