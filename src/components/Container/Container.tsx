@@ -1,13 +1,17 @@
+import { useState } from "react";
+
 import Main from "../Main";
 import Aside from "../Aside";
 
 import "./Container.css";
 
 const Container = () => {
+  const [active, setActive] = useState("personnel");
+
   return (
     <div className="container">
-      <Aside />
-      <Main />
+      <Aside activeItem={active} selectActiveItem={setActive} />
+      <Main activeItem={active} />
     </div>
   );
 };
