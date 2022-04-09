@@ -2,12 +2,12 @@ import { BarChart } from "../BarChart";
 
 import data from "../../data/data.json";
 
-const Main = ({activeItem}: {activeItem: string}) => {
+const Main = ({ activeItem }: { activeItem: string }) => {
   const transformedData = transformData(data.data);
 
   return (
     <main>
-      <BarChart data={transformedData} />
+      <BarChart data={transformedData} active={activeItem} />
     </main>
   );
 };
