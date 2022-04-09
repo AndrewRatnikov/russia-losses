@@ -1,4 +1,4 @@
-import Main from "./Container";
+import Container from "./Container";
 
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
         <h1>Combat losses of the enemy</h1>
       </header>
 
-      <Main />
+      <Container />
     </div>
   );
 }

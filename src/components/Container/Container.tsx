@@ -6,7 +6,7 @@ import Aside from "../Aside";
 import "./Container.css";
 
 const Container = () => {
-  const [active, setActive] = useState("personnel");
+  const [active, setActive] = useState<ActiveItem>("personnel");
 
   return (
     <div className="container">
@@ -15,5 +15,21 @@ const Container = () => {
     </div>
   );
 };
+
+export type ActiveItem =
+  | "personnel"
+  | "tanks"
+  | "apv"
+  | "artillerySystems"
+  | "mlrs"
+  | "aaws"
+  | "aircraft"
+  | "helicopters"
+  | "vehicles"
+  | "boatsCutters"
+  | "fuelTanks"
+  | "uav"
+  | "specialEquipment"
+  | "srbmSystem";
 
 export default Container;
