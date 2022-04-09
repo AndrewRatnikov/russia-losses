@@ -6,7 +6,21 @@ export interface AsideProps {
 }
 
 export interface DataItem {
-  [key: string]: string | number | null;
+  date: string;
+  personnel: number | null;
+  tanks: number | null;
+  apv: number | null;
+  artillerySystems: number | null;
+  mlrs: number | null;
+  aaws: number | null;
+  aircraft: number | null;
+  helicopters: number | null;
+  vehicles: number | null;
+  boatsCutters: number | null;
+  fuelTanks: number | null;
+  uav: number | null;
+  specialEquipment: number | null;
+  srbmSystem: number | null;
 }
 
 export type KeyData = Array<{

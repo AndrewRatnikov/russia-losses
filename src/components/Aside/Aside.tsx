@@ -14,10 +14,25 @@ const Aside = ({ selectActiveItem, activeItem }: AsideProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const keys = keyData.keys.slice(1) as KeyData;
   const activeDataItem: DataItem = data.data[activeIndex];
-  const prevDataItem: DataItem = data.data[activeIndex + 1];
+  const prevDataItem: DataItem | undefined = data.data[activeIndex + 1];
 
   const onClickHandler = (id: ActiveItem) => () => {
     selectActiveItem(id);
+  };
+
+  const getDataItem = (id: ActiveItem): string =>
+    activeDataItem[id] ? `${activeDataItem[id]}` : "-";
+  const getВifferenceCurPrevDataItem = (id: ActiveItem): string | null => {
+    if (
+      !prevDataItem ||
+      !activeDataItem[id] ||
+      !prevDataItem[id] ||
+      !(activeDataItem[id]! - prevDataItem[id]!)
+    ) {
+      return null;
+    }
+
+    return `(+${activeDataItem[id]! - prevDataItem[id]!})`;
   };
 
   return (
@@ -34,18 +49,8 @@ const Aside = ({ selectActiveItem, activeItem }: AsideProps) => {
             className={`card-item ${activeItem === key.id ? "active" : ""}`}
             onClick={onClickHandler(key.id)}
           >
-            <span>{key.nameEn}:</span>{" "}
-            {activeDataItem[key.id] ? activeDataItem[key.id] : "-"}{" "}
-            {!!prevDataItem &&
-            activeDataItem[key.id] &&
-            prevDataItem[key.id] &&
-            (activeDataItem[key.id] as number) -
-              (prevDataItem[key.id] as number)
-              ? `(+${
-                  (activeDataItem[key.id] as number) -
-                  (prevDataItem[key.id] as number)
-                })`
-              : null}
+            <span>{key.nameEn}:</span> {getDataItem(key.id)}{" "}
+            {getВifferenceCurPrevDataItem(key.id)}
           </li>
         ))}
       </ul>
