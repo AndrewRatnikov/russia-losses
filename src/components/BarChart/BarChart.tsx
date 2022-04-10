@@ -27,13 +27,16 @@ const BarChart = ({ data, active }: BarChartProps) => {
       .nice()
       .range([height - margin.bottom, margin.top]);
 
+    svg.call(zoom);
+
     if (svg.selectAll("g").nodes().length) {
       svg.selectAll("g");
     } else {
-      svg.append("g").attr("class", "bars");
+      svg.append("g");
     }
 
     svg
+      .attr("class", "bars")
       .attr("fill", "white")
       .selectAll("rect")
       .data(data)
@@ -42,6 +45,34 @@ const BarChart = ({ data, active }: BarChartProps) => {
       .attr("y", (d) => y(d[active] as number))
       .attr("height", (d) => y(0) - y(d[active] as number))
       .attr("width", x.bandwidth());
+
+    function zoom(_svg: any) {
+      const extent: [[number, number], [number, number]] = [
+        [margin.left, margin.top],
+        [width - margin.right, height - margin.top],
+      ];
+
+      _svg.call(
+        d3
+          .zoom()
+          .scaleExtent([1, 8])
+          .translateExtent(extent)
+          .extent(extent)
+          .on("zoom", zoomed)
+      );
+
+      function zoomed(event: any) {
+        x.range(
+          [margin.left, width - margin.right].map((d) =>
+            event.transform.applyX(d)
+          )
+        );
+        _svg
+          .selectAll(".bars rect")
+          .attr("x", (d: any) => x(d.date))
+          .attr("width", x.bandwidth());
+      }
+    }
   });
 
   return <svg ref={ref} />;
