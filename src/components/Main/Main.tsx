@@ -18,10 +18,11 @@ function transformData(data: Array<{ [key: string]: number | string | null }>) {
     return Object.keys(item).reduce(
       (obj, key) => ({
         ...obj,
-        [key]:
+        [key]: isNull(
           index === data.length - 1
             ? data[index][key]
-            : getItem(data[index][key], data[index + 1][key]),
+            : getItem(data[index][key], data[index + 1][key])
+        ),
       }),
       {}
     );
@@ -42,6 +43,10 @@ function getItem(cur: null | number | string, prev: null | number | string) {
   }
 
   return cur - prev;
+}
+
+function isNull(value: string | number | null): string | number {
+  return value ? value : 0;
 }
 
 export default Main;
