@@ -42,9 +42,10 @@ const BarChart = ({ data, active }: BarChartProps) => {
     svg
       .call(zoom)
       .on("pointerenter pointermove", pointermoved)
-      .on("pointerleave", () =>
-        tooltip.style("display", "none").selectChildren().remove()
-      );
+      .on("pointerleave", () => {
+        tooltip.style("display", "none").selectChildren().remove();
+        d3.select(".line").style("stroke-width", 0);
+      });
 
     if (svg.selectAll("g").nodes().length) {
       svg.selectAll("g");
@@ -62,6 +63,12 @@ const BarChart = ({ data, active }: BarChartProps) => {
       .attr("y", (d) => yScale(d[active] as number))
       .attr("height", (d) => yScale(0) - yScale(d[active] as number))
       .attr("width", xScale.bandwidth());
+
+    svg
+      .append("line")
+      .attr("class", "line")
+      .style("stroke", "#fff")
+      .style("opacity", 0.33);
 
     function zoom(_svg: any) {
       const extent: [[number, number], [number, number]] = [
@@ -95,6 +102,14 @@ const BarChart = ({ data, active }: BarChartProps) => {
       const [xCoordinate] = d3.pointer(event); // [x, y]
       const scale = d3.scaleQuantize(xDomain).domain(xRange);
       const xValue = scale(xCoordinate);
+
+      svg
+        .select(".line")
+        .style("stroke-width", 2)
+        .attr("x1", xCoordinate)
+        .attr("x2", xCoordinate)
+        .attr("y1", margin.top)
+        .attr("y2", height - margin.bottom);
 
       const tooltipValue = data.find((d) => d.date === xValue)?.[active];
 
