@@ -1,4 +1,11 @@
 .container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: block;
+  }
 }

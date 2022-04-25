@@ -2,10 +2,12 @@ import { useState, useMemo } from "react";
 
 import DateSlider from "../DateSlider";
 
+import { MenuContext } from "../../context";
+
+import { ActiveItem } from "../Container/Container";
 import keyData from "../../data/keys.json";
 import data from "../../data/data.json";
 import { AsideProps, DataItem, KeyData } from "./model";
-import { ActiveItem } from "../Container/Container";
 
 import "./Aside.css";
 
@@ -36,25 +38,29 @@ const Aside = ({ selectActiveItem, activeItem }: AsideProps) => {
   };
 
   return (
-    <aside>
-      <ul className="card">
-        <DateSlider
-          dates={dates}
-          setActive={setActiveIndex}
-          active={activeIndex}
-        />
-        {keys.map((key) => (
-          <li
-            key={key.id}
-            className={`card-item ${activeItem === key.id ? "active" : ""}`}
-            onClick={onClickHandler(key.id)}
-          >
-            <span>{key.nameEn}:</span> {getDataItem(key.id)}{" "}
-            {getВifferenceCurPrevDataItem(key.id)}
-          </li>
-        ))}
-      </ul>
-    </aside>
+    <MenuContext.Consumer>
+      {(state) => (
+        <aside className={state.isOpen ? "open" : ""}>
+          <ul className="card">
+            <DateSlider
+              dates={dates}
+              setActive={setActiveIndex}
+              active={activeIndex}
+            />
+            {keys.map((key) => (
+              <li
+                key={key.id}
+                className={`card-item ${activeItem === key.id ? "active" : ""}`}
+                onClick={onClickHandler(key.id)}
+              >
+                <span>{key.nameEn}:</span> {getDataItem(key.id)}{" "}
+                {getВifferenceCurPrevDataItem(key.id)}
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+    </MenuContext.Consumer>
   );
 };
 
