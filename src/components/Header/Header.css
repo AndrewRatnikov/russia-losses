@@ -20,6 +20,34 @@
   cursor: pointer;
 }
 
+.lang {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.lang-btn {
+  color: #fff;
+  border: 1px solid transparent ;
+  border-radius: 100%;
+  padding: 10px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background-color: #4b4b4b;
+}
+
+.lang-btn + .lang-btn {
+  margin-left: 10px;
+}
+
+.lang-btn.active {
+  border-color: #fff;
+}
+
 @media screen and (min-width: 1025px) {
   .menu-icon {
     display: none;

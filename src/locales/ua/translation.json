@@ -1,0 +1,20 @@
+{
+  "The total combat losses of the enemy": "Загальні бойові втрати противника",
+
+  "date": "дата",
+  "personnel": "особового складу",
+  "tanks": "танків",
+  "APV": "бойових броньованих машин",
+  "artillery systems": "артилерійських систем",
+  "MLRS": "РСЗВ",
+  "Anti-aircraft warfare systems": "засоби ППО",
+  "aircraft": "літаків",
+  "helicopters": "гелікоптерів",
+  "vehicles": "автомобільної техніки",
+  "boats / cutters": "кораблі / катери",
+  "fuel tanks": "цистерн з ПММ",
+  "UAV operational-tactical level": "БПЛА оперативно-тактичного рівня",
+  "special equipment": "Спеціальна техніка",
+  "mobile SRBM system": "Пускові установки ОТРК/ТРК",
+  "cruise missiles": "Крилаті ракети"
+}

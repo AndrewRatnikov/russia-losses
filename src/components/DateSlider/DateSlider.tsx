@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 import "./DateSlider.css";
 
 const DateSlider = ({ dates, active, setActive }: DateSliderProps) => {
+  const { t } = useTranslation();
   const datesLength = dates.length;
   const prevClickHandler = () => {
     setActive(active + 1);
@@ -11,7 +14,7 @@ const DateSlider = ({ dates, active, setActive }: DateSliderProps) => {
 
   return (
     <li key={dates[0]} className="date-slider">
-      <span>date:</span>
+      <span>{t("date")}:</span>
       {active !== datesLength - 1 && (
         <span className="date-slider-arrow" onClick={prevClickHandler}>
           &#8678;

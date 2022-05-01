@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import DateSlider from "../DateSlider";
 
@@ -14,6 +15,7 @@ import "./Aside.css";
 const Aside = ({ selectActiveItem, activeItem }: AsideProps) => {
   const dates = useMemo(() => data.data.map((dataItem) => dataItem.date), []);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
   const keys = keyData.keys.slice(1) as KeyData;
   const activeDataItem: DataItem = data.data[activeIndex];
   const prevDataItem: DataItem | undefined = data.data[activeIndex + 1];
@@ -24,7 +26,7 @@ const Aside = ({ selectActiveItem, activeItem }: AsideProps) => {
 
   const getDataItem = (id: ActiveItem): string =>
     activeDataItem[id] ? `${activeDataItem[id]}` : "-";
-  const getВifferenceCurPrevDataItem = (id: ActiveItem): string | null => {
+  const getDifferenceCurPrevDataItem = (id: ActiveItem): string | null => {
     if (
       !prevDataItem ||
       !activeDataItem[id] ||
@@ -53,8 +55,8 @@ const Aside = ({ selectActiveItem, activeItem }: AsideProps) => {
                 className={`card-item ${activeItem === key.id ? "active" : ""}`}
                 onClick={onClickHandler(key.id)}
               >
-                <span>{key.nameEn}:</span> {getDataItem(key.id)}{" "}
-                {getВifferenceCurPrevDataItem(key.id)}
+                <span>{t(key.nameEn)}:</span> {getDataItem(key.id)}{" "}
+                {getDifferenceCurPrevDataItem(key.id)}
               </li>
             ))}
           </ul>
