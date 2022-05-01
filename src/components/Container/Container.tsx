@@ -30,6 +30,7 @@ export type ActiveItem =
   | "fuelTanks"
   | "uav"
   | "specialEquipment"
-  | "srbmSystem";
+  | "srbmSystem"
+  | "cruiseMissiles";
 
 export default Container;

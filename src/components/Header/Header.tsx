@@ -15,7 +15,7 @@ const Header = () => {
             className="menu-icon"
             onClick={state.toggleOpen}
           />
-          <h1>Combat losses of the enemy</h1>
+          <h1>The total combat losses of the enemy</h1>
         </header>
       )}
     </MenuContext.Consumer>

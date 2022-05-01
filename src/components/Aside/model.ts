@@ -21,6 +21,7 @@ export interface DataItem {
   uav: number | null;
   specialEquipment: number | null;
   srbmSystem: number | null;
+  cruiseMissiles?: number | null;
 }
 
 export type KeyData = Array<{
