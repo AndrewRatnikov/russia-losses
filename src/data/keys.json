@@ -74,6 +74,11 @@
       "id": "srbmSystem",
       "nameEn": "mobile SRBM system",
       "nameUa": "Пускові установки ОТРК/ТРК"
+    },
+    {
+      "id": "cruiseMissiles",
+      "nameEn": "cruise missiles",
+      "nameUa": "Крилаті ракети"
     }
   ]
 }
