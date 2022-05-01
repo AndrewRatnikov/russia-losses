@@ -13,12 +13,14 @@ const Main = ({ activeItem }: { activeItem: ActiveItem }) => {
   );
 };
 
-function transformData(data: Array<{ [key: string]: number | string | null }>) {
+function transformData(
+  data: Array<{ [key: string]: number | string | null | undefined }>
+) {
   return data.map((item, index) => {
     return Object.keys(item).reduce(
       (obj, key) => ({
         ...obj,
-        [key]: isNull(
+        [key]: isValid(
           index === data.length - 1
             ? data[index][key]
             : getItem(data[index][key], data[index + 1][key])
@@ -29,7 +31,10 @@ function transformData(data: Array<{ [key: string]: number | string | null }>) {
   });
 }
 
-function getItem(cur: null | number | string, prev: null | number | string) {
+function getItem(
+  cur: null | number | string | undefined,
+  prev: null | number | string | undefined
+) {
   if (typeof cur === "string" || typeof prev === "string") {
     return cur;
   }
@@ -45,7 +50,7 @@ function getItem(cur: null | number | string, prev: null | number | string) {
   return cur - prev;
 }
 
-function isNull(value: string | number | null): string | number {
+function isValid(value: string | number | null | undefined): string | number {
   return value ? value : 0;
 }
 
