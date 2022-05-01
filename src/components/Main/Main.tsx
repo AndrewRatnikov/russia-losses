@@ -1,10 +1,12 @@
 import { BarChart } from "../BarChart";
 
 import data from "../../data/data.json";
+import keys from "../../data/keys.json"
 import { ActiveItem } from "../Container/Container";
 
 const Main = ({ activeItem }: { activeItem: ActiveItem }) => {
-  const transformedData = transformData(data.data).reverse();
+  const _keys = keys.keys.map(key => key.id)
+  const transformedData = transformData(data.data, _keys).reverse();
 
   return (
     <main>
@@ -14,16 +16,17 @@ const Main = ({ activeItem }: { activeItem: ActiveItem }) => {
 };
 
 function transformData(
-  data: Array<{ [key: string]: number | string | null | undefined }>
+  data: Array<{ [key: string]: number | string | null | undefined }>,
+  keys: Array<string>
 ) {
   return data.map((item, index) => {
-    return Object.keys(item).reduce(
+    return keys.reduce(
       (obj, key) => ({
         ...obj,
         [key]: isValid(
           index === data.length - 1
-            ? data[index][key]
-            : getItem(data[index][key], data[index + 1][key])
+            ? item[key]
+            : getItem(item[key], data[index + 1][key])
         ),
       }),
       {}
