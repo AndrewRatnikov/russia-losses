@@ -1,6 +1,24 @@
 {
   "data": [
     {
+      "date": "27.07.2022",
+      "personnel": 40070,
+      "tanks": 1738,
+      "apv": 3971,
+      "artillerySystems": 883,
+      "mlrs": 258,
+      "aaws": 117,
+      "aircraft": 222,
+      "helicopters": 190,
+      "uav": 726,
+      "cruiseMissiles": 174,
+      "boatsCutters": 15,
+      "vehicles": 2847,
+      "specialEquipment": 75,
+      "fuelTanks": 76,
+      "srbmSystem": 4
+    },
+    {
       "date": "26.07.2022",
       "personnel": 39870,
       "tanks": 1737,
@@ -10,7 +28,7 @@
       "aaws": 117,
       "aircraft": 222,
       "helicopters": 189,
-      "uav": 719,
+      "uav": 722,
       "cruiseMissiles": 174,
       "boatsCutters": 15,
       "vehicles": 2835,
