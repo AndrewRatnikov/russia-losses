@@ -1,6 +1,42 @@
 {
   "data": [
     {
+      "date": "21.01.2023",
+      "personnel": 1201600,
+      "tanks": 3140,
+      "apv": 6256,
+      "artillerySystems": 2135,
+      "mlrs": 443,
+      "aaws": 220,
+      "aircraft": 287,
+      "helicopters": 277,
+      "uav": 1891,
+      "cruiseMissiles": 749,
+      "boatsCutters": 17,
+      "vehicles": 4918,
+      "specialEquipment": 193,
+      "fuelTanks": 76,
+      "srbmSystem": 4
+    },
+    {
+      "date": "20.01.2023",
+      "personnel": 119300,
+      "tanks": 3139,
+      "apv": 6241,
+      "artillerySystems": 2129,
+      "mlrs": 442,
+      "aaws": 220,
+      "aircraft": 287,
+      "helicopters": 277,
+      "uav": 1886,
+      "cruiseMissiles": 749,
+      "boatsCutters": 17,
+      "vehicles": 4903,
+      "specialEquipment": 190,
+      "fuelTanks": 76,
+      "srbmSystem": 4
+    },
+    {
       "date": "19.01.2023",
       "personnel": 118530,
       "tanks": 3136,
