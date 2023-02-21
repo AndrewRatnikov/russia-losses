@@ -35,16 +35,14 @@ const BarChart = ({ data, active }: BarChartProps) => {
     const tooltip: any = d3.select(".plot-tooltip").node()
       ? d3.select(".plot-tooltip")
       : body
-        .append("div")
-        .style("pointer-events", "none")
-        .attr("class", "plot-tooltip");
+          .append("div")
+          .style("pointer-events", "none")
+          .attr("class", "plot-tooltip");
 
-    svg
-      .on("pointerenter pointermove", pointermoved)
-      .on("pointerleave", () => {
-        tooltip.style("display", "none").selectChildren().remove();
-        d3.select(".line").style("stroke-width", 0);
-      });
+    svg.on("pointerenter pointermove", pointermoved).on("pointerleave", () => {
+      tooltip.style("display", "none").selectChildren().remove();
+      d3.select(".line").style("stroke-width", 0);
+    });
 
     if (svg.selectAll("g").nodes().length) {
       svg.selectAll("g");
@@ -68,8 +66,6 @@ const BarChart = ({ data, active }: BarChartProps) => {
       .attr("class", "line")
       .style("stroke", "#fff")
       .style("opacity", 0.33);
-
-
 
     function pointermoved(event: any) {
       const [xCoordinate] = d3.pointer(event); // [x, y]
