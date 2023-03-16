@@ -39,10 +39,13 @@ const BarChart = ({ data, active }: BarChartProps) => {
           .style("pointer-events", "none")
           .attr("class", "plot-tooltip");
 
-    svg.on("pointerenter pointermove", pointermoved).on("pointerleave", () => {
-      tooltip.style("display", "none").selectChildren().remove();
-      d3.select(".line").style("stroke-width", 0);
-    });
+    svg
+      .call(zoom)
+      .on("pointerenter pointermove", pointermoved)
+      .on("pointerleave", () => {
+        tooltip.style("display", "none").selectChildren().remove();
+        d3.select(".line").style("stroke-width", 0);
+      });
 
     if (svg.selectAll("g").nodes().length) {
       svg.selectAll("g");
@@ -67,9 +70,37 @@ const BarChart = ({ data, active }: BarChartProps) => {
       .style("stroke", "#fff")
       .style("opacity", 0.33);
 
+    function zoom(_svg: any) {
+      const extent: [[number, number], [number, number]] = [
+        [margin.left, margin.top],
+        [width - margin.right, height - margin.top],
+      ];
+
+      _svg.call(
+        d3
+          .zoom()
+          .scaleExtent([1, 8])
+          .translateExtent(extent)
+          .extent(extent)
+          .on("zoom", zoomed)
+      );
+
+      function zoomed(event: any) {
+        xScale.range(
+          [margin.left, width - margin.right].map((d) =>
+            event.transform.applyX(d)
+          )
+        );
+        _svg
+          .selectAll(".bars rect")
+          .attr("x", (d: any) => xScale(d.date))
+          .attr("width", xScale.bandwidth());
+      }
+    }
+
     function pointermoved(event: any) {
       const [xCoordinate] = d3.pointer(event); // [x, y]
-      const scale = d3.scaleQuantize(xDomain).domain(xRange);
+      const scale = d3.scaleQuantize(xDomain).domain(xScale.range());
       const xValue = scale(xCoordinate);
 
       svg
