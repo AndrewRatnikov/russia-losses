@@ -5,10 +5,10 @@ import { useD3 } from "../../hooks";
 import "./BarChart.css";
 
 const margin = {
-  top: 30,
-  bottom: 30,
-  left: 30,
-  right: 30,
+  top: 10,
+  bottom: 10,
+  left: 10,
+  right: 10,
 };
 
 const BarChart = ({ data, active }: BarChartProps) => {
