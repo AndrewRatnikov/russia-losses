@@ -44,7 +44,7 @@ export function isValid(
   return value ? value : 0;
 }
 
-export function addDays(data: Data, by: "day" | "week" | "month") {
+export function addDays(data: Data, by: "day" | "week" | "month" = "day") {
   if (by === "day") {
     return data;
   }
