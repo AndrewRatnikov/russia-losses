@@ -44,13 +44,43 @@ export function isValid(
   return value ? value : 0;
 }
 
+function transformDate(date: string) {
+  return date.split(".").reverse().join(".");
+}
+
 export function addDays(data: Data, by: "day" | "week" | "month" = "day") {
   if (by === "day") {
     return data;
   }
 
-  const monthes = data.reduce((acc: any, item) => {
-    const date = new Date(item.date.split(".").reverse().join("."));
+  if (by === "week") {
+    const weeks = data.reduce((acc: any, item) => {
+      const iteratedDate = new Date(transformDate(item.date));
+      const year = new Date(iteratedDate.getFullYear(), 0, 1);
+      const days = Math.floor(
+        (iteratedDate.getTime() - year.getTime()) / (24 * 60 * 60 * 1000)
+      );
+      const week = Math.ceil((iteratedDate.getDay() + 1 + days) / 7);
+      const weekName = `${week} week ${iteratedDate.getFullYear()}`;
+
+      if (!acc[weekName]) {
+        acc[weekName] = { date: weekName };
+      }
+
+      Object.keys(item).forEach((key) => {
+        if (typeof item[key] === "number") {
+          acc[weekName][key] = (acc[weekName][key] || 0) + item[key];
+        }
+      });
+
+      return acc;
+    }, {});
+
+    return Object.values(weeks);
+  }
+
+  const months = data.reduce((acc: any, item) => {
+    const date = new Date(transformDate(item.date));
     const dateFormatter = new Intl.DateTimeFormat("ua", {
       year: "numeric",
       month: "long",
@@ -70,5 +100,5 @@ export function addDays(data: Data, by: "day" | "week" | "month" = "day") {
     return acc;
   }, {});
 
-  return Object.values(monthes);
+  return Object.values(months);
 }
