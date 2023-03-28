@@ -1,0 +1,29 @@
+.main {
+    position: relative;
+}
+
+.legend {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.legend-item {
+    padding: 0px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.legend-item:hover {
+   filter: brightness(0.8);
+}
+
+.legend-item:active {
+    filter: brightness(0.5);
+ }
+
+ .legend-item.active {
+    background-color: #333;
+ }
