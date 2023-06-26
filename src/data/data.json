@@ -1,8 +1,26 @@
 {
   "data": [
     {
+      "date": "26.06.2023",
+      "personnel": 225580,
+      "tanks": 4031,
+      "apv": 7820,
+      "artillerySystems": 4055,
+      "mlrs": 624,
+      "aaws": 385,
+      "aircraft": 314,
+      "helicopters": 308,
+      "uav": 3482,
+      "cruiseMissiles": 1259,
+      "boatsCutters": 18,
+      "vehicles": 6751,
+      "specialEquipment": 557,
+      "fuelTanks": 76,
+      "srbmSystem": 4
+    },
+    {
       "date": "25.06.2023",
-      "personnel": 224630 ,
+      "personnel": 224630,
       "tanks": 4030,
       "apv": 7806,
       "artillerySystems": 4034,
@@ -20,7 +38,7 @@
     },
     {
       "date": "24.06.2023",
-      "personnel": 223910 ,
+      "personnel": 223910,
       "tanks": 4024,
       "apv": 7804,
       "artillerySystems": 4015,
@@ -38,7 +56,7 @@
     },
     {
       "date": "23.06.2023",
-      "personnel": 223330 ,
+      "personnel": 223330,
       "tanks": 4017,
       "apv": 7798,
       "artillerySystems": 3985,
@@ -56,7 +74,7 @@
     },
     {
       "date": "22.06.2023",
-      "personnel": 222650 ,
+      "personnel": 222650,
       "tanks": 4013,
       "apv": 7783,
       "artillerySystems": 3941,
@@ -74,7 +92,7 @@
     },
     {
       "date": "21.06.2023",
-      "personnel": 222000 ,
+      "personnel": 222000,
       "tanks": 4006,
       "apv": 7771,
       "artillerySystems": 3920,
@@ -92,7 +110,7 @@
     },
     {
       "date": "20.06.2023",
-      "personnel": 221460 ,
+      "personnel": 221460,
       "tanks": 3997,
       "apv": 7750,
       "artillerySystems": 3888,
@@ -110,7 +128,7 @@
     },
     {
       "date": "19.06.2023",
-      "personnel": 220450 ,
+      "personnel": 220450,
       "tanks": 3989,
       "apv": 7735,
       "artillerySystems": 3865,
@@ -128,7 +146,7 @@
     },
     {
       "date": "18.06.2023",
-      "personnel": 219820 ,
+      "personnel": 219820,
       "tanks": 3984,
       "apv": 7729,
       "artillerySystems": 3847,
@@ -146,7 +164,7 @@
     },
     {
       "date": "17.06.2023",
-      "personnel": 219170 ,
+      "personnel": 219170,
       "tanks": 3977,
       "apv": 7706,
       "artillerySystems": 3834,
@@ -164,7 +182,7 @@
     },
     {
       "date": "16.06.2023",
-      "personnel": 218500 ,
+      "personnel": 218500,
       "tanks": 3965,
       "apv": 7683,
       "artillerySystems": 3812,
@@ -182,7 +200,7 @@
     },
     {
       "date": "15.06.2023",
-      "personnel": 217910 ,
+      "personnel": 217910,
       "tanks": 3955,
       "apv": 7667,
       "artillerySystems": 3793,
@@ -200,7 +218,7 @@
     },
     {
       "date": "14.06.2023",
-      "personnel": 217330 ,
+      "personnel": 217330,
       "tanks": 3943,
       "apv": 7653,
       "artillerySystems": 3783,
@@ -218,7 +236,7 @@
     },
     {
       "date": "13.06.2023",
-      "personnel": 216650 ,
+      "personnel": 216650,
       "tanks": 3935,
       "apv": 7642,
       "artillerySystems": 3766,
@@ -236,7 +254,7 @@
     },
     {
       "date": "12.06.2023",
-      "personnel": 216180 ,
+      "personnel": 216180,
       "tanks": 3931,
       "apv": 7636,
       "artillerySystems": 3746,
@@ -254,7 +272,7 @@
     },
     {
       "date": "11.06.2023",
-      "personnel": 215640 ,
+      "personnel": 215640,
       "tanks": 3926,
       "apv": 7631,
       "artillerySystems": 3736,
@@ -272,7 +290,7 @@
     },
     {
       "date": "10.06.2023",
-      "personnel": 214660 ,
+      "personnel": 214660,
       "tanks": 3909,
       "apv": 7607,
       "artillerySystems": 3717,
@@ -290,7 +308,7 @@
     },
     {
       "date": "09.06.2023",
-      "personnel": 213770 ,
+      "personnel": 213770,
       "tanks": 3901,
       "apv": 7600,
       "artillerySystems": 3702,
@@ -308,7 +326,7 @@
     },
     {
       "date": "08.06.2023",
-      "personnel": 212760 ,
+      "personnel": 212760,
       "tanks": 3891,
       "apv": 7576,
       "artillerySystems": 3668,
@@ -326,7 +344,7 @@
     },
     {
       "date": "07.06.2023",
-      "personnel": 212030 ,
+      "personnel": 212030,
       "tanks": 3873,
       "apv": 7560,
       "artillerySystems": 3640,
@@ -344,7 +362,7 @@
     },
     {
       "date": "06.06.2023",
-      "personnel": 211150 ,
+      "personnel": 211150,
       "tanks": 3860,
       "apv": 7543,
       "artillerySystems": 3603,
@@ -362,7 +380,7 @@
     },
     {
       "date": "05.06.2023",
-      "personnel": 210350 ,
+      "personnel": 210350,
       "tanks": 3848,
       "apv": 7523,
       "artillerySystems": 3567,
@@ -380,7 +398,7 @@
     },
     {
       "date": "04.06.2023",
-      "personnel": 209940 ,
+      "personnel": 209940,
       "tanks": 3837,
       "apv": 7512,
       "artillerySystems": 3555,
@@ -398,7 +416,7 @@
     },
     {
       "date": "03.06.2023",
-      "personnel": 209470 ,
+      "personnel": 209470,
       "tanks": 3829,
       "apv": 7502,
       "artillerySystems": 3533,
@@ -416,7 +434,7 @@
     },
     {
       "date": "02.06.2023",
-      "personnel": 208910 ,
+      "personnel": 208910,
       "tanks": 3819,
       "apv": 7490,
       "artillerySystems": 3501,
@@ -434,7 +452,7 @@
     },
     {
       "date": "01.06.2023",
-      "personnel": 208370 ,
+      "personnel": 208370,
       "tanks": 3804,
       "apv": 7478,
       "artillerySystems": 3474,
@@ -452,7 +470,7 @@
     },
     {
       "date": "31.05.2023",
-      "personnel": 207910 ,
+      "personnel": 207910,
       "tanks": 3802,
       "apv": 7472,
       "artillerySystems": 3460,
@@ -470,7 +488,7 @@
     },
     {
       "date": "30.05.2023",
-      "personnel": 207440 ,
+      "personnel": 207440,
       "tanks": 3802,
       "apv": 7469,
       "artillerySystems": 3445,
@@ -488,7 +506,7 @@
     },
     {
       "date": "29.05.2023",
-      "personnel": 207030 ,
+      "personnel": 207030,
       "tanks": 3801,
       "apv": 7467,
       "artillerySystems": 3435,
@@ -506,7 +524,7 @@
     },
     {
       "date": "28.05.2023",
-      "personnel": 206600 ,
+      "personnel": 206600,
       "tanks": 3797,
       "apv": 7456,
       "artillerySystems": 3425,
@@ -524,7 +542,7 @@
     },
     {
       "date": "27.05.2023",
-      "personnel": 206200 ,
+      "personnel": 206200,
       "tanks": 3794,
       "apv": 7449,
       "artillerySystems": 3414,
@@ -542,7 +560,7 @@
     },
     {
       "date": "26.05.2023",
-      "personnel": 205720 ,
+      "personnel": 205720,
       "tanks": 3796,
       "apv": 7435,
       "artillerySystems": 3384,
@@ -560,7 +578,7 @@
     },
     {
       "date": "25.05.2023",
-      "personnel": 205260 ,
+      "personnel": 205260,
       "tanks": 3795,
       "apv": 7432,
       "artillerySystems": 3359,
@@ -578,7 +596,7 @@
     },
     {
       "date": "24.05.2023",
-      "personnel": 204760 ,
+      "personnel": 204760,
       "tanks": 3792,
       "apv": 7424,
       "artillerySystems": 3339,
@@ -596,7 +614,7 @@
     },
     {
       "date": "23.05.2023",
-      "personnel": 204360 ,
+      "personnel": 204360,
       "tanks": 3789,
       "apv": 7419,
       "artillerySystems": 3318,
@@ -614,7 +632,7 @@
     },
     {
       "date": "22.05.2023",
-      "personnel": 203880 ,
+      "personnel": 203880,
       "tanks": 3785,
       "apv": 7407,
       "artillerySystems": 3278,
@@ -632,7 +650,7 @@
     },
     {
       "date": "21.05.2023",
-      "personnel": 203160 ,
+      "personnel": 203160,
       "tanks": 3783,
       "apv": 7398,
       "artillerySystems": 3258,
@@ -650,7 +668,7 @@
     },
     {
       "date": "20.05.2023",
-      "personnel": 202430 ,
+      "personnel": 202430,
       "tanks": 3781,
       "apv": 7382,
       "artillerySystems": 3229,
@@ -668,7 +686,7 @@
     },
     {
       "date": "19.05.2023",
-      "personnel": 201760 ,
+      "personnel": 201760,
       "tanks": 3777,
       "apv": 7377,
       "artillerySystems": 3210,
@@ -686,7 +704,7 @@
     },
     {
       "date": "18.05.2023",
-      "personnel": 201100 ,
+      "personnel": 201100,
       "tanks": 3773,
       "apv": 7373,
       "artillerySystems": 3198,
@@ -704,7 +722,7 @@
     },
     {
       "date": "17.05.2023",
-      "personnel": 200590 ,
+      "personnel": 200590,
       "tanks": 3771,
       "apv": 7365,
       "artillerySystems": 3166,
@@ -722,7 +740,7 @@
     },
     {
       "date": "16.05.2023",
-      "personnel": 199980 ,
+      "personnel": 199980,
       "tanks": 3762,
       "apv": 7348,
       "artillerySystems": 3150,
@@ -740,7 +758,7 @@
     },
     {
       "date": "15.05.2023",
-      "personnel": 199460 ,
+      "personnel": 199460,
       "tanks": 3759,
       "apv": 7336,
       "artillerySystems": 3137,
@@ -758,7 +776,7 @@
     },
     {
       "date": "14.05.2023",
-      "personnel": 198880 ,
+      "personnel": 198880,
       "tanks": 3756,
       "apv": 7325,
       "artillerySystems": 3116,
@@ -776,7 +794,7 @@
     },
     {
       "date": "13.05.2023",
-      "personnel": 198260 ,
+      "personnel": 198260,
       "tanks": 3751,
       "apv": 7307,
       "artillerySystems": 3095,
@@ -794,7 +812,7 @@
     },
     {
       "date": "12.05.2023",
-      "personnel": 197670 ,
+      "personnel": 197670,
       "tanks": 3745,
       "apv": 7295,
       "artillerySystems": 3068,
@@ -812,7 +830,7 @@
     },
     {
       "date": "11.05.2023",
-      "personnel": 196920 ,
+      "personnel": 196920,
       "tanks": 3740,
       "apv": 7287,
       "artillerySystems": 3053,
@@ -830,7 +848,7 @@
     },
     {
       "date": "10.05.2023",
-      "personnel": 196310 ,
+      "personnel": 196310,
       "tanks": 3736,
       "apv": 7275,
       "artillerySystems": 3039,
@@ -848,7 +866,7 @@
     },
     {
       "date": "09.05.2023",
-      "personnel": 195620 ,
+      "personnel": 195620,
       "tanks": 3734,
       "apv": 7257,
       "artillerySystems": 3031,
@@ -866,7 +884,7 @@
     },
     {
       "date": "08.05.2023",
-      "personnel": 194970 ,
+      "personnel": 194970,
       "tanks": 3730,
       "apv": 7253,
       "artillerySystems": 3018,
@@ -884,7 +902,7 @@
     },
     {
       "date": "07.05.2023",
-      "personnel": 194430 ,
+      "personnel": 194430,
       "tanks": 3723,
       "apv": 7248,
       "artillerySystems": 3010,
@@ -902,7 +920,7 @@
     },
     {
       "date": "06.05.2023",
-      "personnel": 193770 ,
+      "personnel": 193770,
       "tanks": 3717,
       "apv": 7238,
       "artillerySystems": 2992,
@@ -920,7 +938,7 @@
     },
     {
       "date": "05.05.2023",
-      "personnel": 193210 ,
+      "personnel": 193210,
       "tanks": 3710,
       "apv": 7224,
       "artillerySystems": 2978,
@@ -938,7 +956,7 @@
     },
     {
       "date": "04.05.2023",
-      "personnel": 192590 ,
+      "personnel": 192590,
       "tanks": 3707,
       "apv": 7216,
       "artillerySystems": 2962,
@@ -956,7 +974,7 @@
     },
     {
       "date": "03.05.2023",
-      "personnel": 191940 ,
+      "personnel": 191940,
       "tanks": 3702,
       "apv": 7199,
       "artillerySystems": 2946,
@@ -974,7 +992,7 @@
     },
     {
       "date": "02.05.2023",
-      "personnel": 191420 ,
+      "personnel": 191420,
       "tanks": 3701,
       "apv": 7193,
       "artillerySystems": 2930,
