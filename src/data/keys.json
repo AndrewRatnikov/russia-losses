@@ -79,6 +79,11 @@
       "id": "cruiseMissiles",
       "nameEn": "cruise missiles",
       "nameUa": "Крилаті ракети"
+    },
+    {
+      "id": "submarines",
+      "nameEn": "submarines",
+      "nameUa": "підводні човни"
     }
   ]
 }
