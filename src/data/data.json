@@ -1,6 +1,25 @@
 {
   "data": [
     {
+      "date": "8.02.2024",
+      "personnel": 392380,
+      "tanks": 6383,
+      "apv": 11899,
+      "artillerySystems": 9411,
+      "mlrs": 980,
+      "aaws": 666,
+      "aircraft": 332,
+      "helicopters": 325,
+      "uav": 7191,
+      "cruiseMissiles": 1880,
+      "boatsCutters": 24,
+      "submarines": 1,
+      "vehicles": 12513,
+      "specialEquipment": 1505,
+      "fuelTanks": 76,
+      "srbmSystem": 4
+    },
+    {
       "date": "7.02.2024",
       "personnel": 391470,
       "tanks": 6372,
