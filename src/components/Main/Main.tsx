@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { BarChart } from "../BarChart";
@@ -7,9 +8,8 @@ import keys from "../../data/keys.json";
 import { ActiveItem } from "../Container/Container";
 import { addDays, transformData } from "./helpers";
 import "./Main.css";
-import { useState } from "react";
 
-type Legend = "day" | "week" | "month";
+type Legend = "day" | "week" | "month" | "year";
 
 const Main = ({ activeItem }: { activeItem: ActiveItem }) => {
   const [legend, setLegend] = useState<Legend>("day");
@@ -35,17 +35,26 @@ const Main = ({ activeItem }: { activeItem: ActiveItem }) => {
         >
           {t("days")}
         </span>
+
         <span
           className={`legend-item ${legend === "week" ? "active" : ""}`}
           onClick={legendHandler("week")}
         >
           {t("weeks")}
         </span>
+
         <span
           className={`legend-item ${legend === "month" ? "active" : ""}`}
           onClick={legendHandler("month")}
         >
           {t("months")}
+        </span>
+
+        <span
+          className={`legend-item ${legend === "year" ? "active" : ""}`}
+          onClick={legendHandler("year")}
+        >
+          {t("years")}
         </span>
       </div>
     </main>

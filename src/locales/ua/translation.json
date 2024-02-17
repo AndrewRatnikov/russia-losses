@@ -1,6 +1,5 @@
 {
   "The total combat losses of the enemy": "Загальні бойові втрати противника",
-
   "date": "дата",
   "personnel": "особового складу",
   "tanks": "танків",
@@ -19,5 +18,6 @@
   "cruise missiles": "Крилаті ракети",
   "days": "дні",
   "weeks": "тижні",
-  "months": "місяці"
+  "months": "місяці",
+  "years": "роки"
 }

@@ -1,6 +1,5 @@
 {
   "The total combat losses of the enemy": "The total combat losses of the enemy",
-
   "date": "date",
   "personnel": "personnel",
   "tanks": "tanks",
@@ -19,5 +18,6 @@
   "cruise missiles": "cruise missiles",
   "days": "days",
   "weeks": "weeks",
-  "months": "months"
+  "months": "months",
+  "years": "years"
 }

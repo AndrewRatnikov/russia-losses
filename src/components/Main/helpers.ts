@@ -48,7 +48,10 @@ function transformDate(date: string) {
   return date.split(".").reverse().join(".");
 }
 
-export function addDays(data: Data, by: "day" | "week" | "month" = "day") {
+export function addDays(
+  data: Data,
+  by: "day" | "week" | "month" | "year" = "day"
+) {
   if (by === "day") {
     return data;
   }
@@ -79,26 +82,50 @@ export function addDays(data: Data, by: "day" | "week" | "month" = "day") {
     return Object.values(weeks);
   }
 
-  const months = data.reduce((acc: any, item) => {
+  if (by === "month") {
+    const months = data.reduce((acc: any, item) => {
+      const date = new Date(transformDate(item.date));
+      const dateFormatter = new Intl.DateTimeFormat("ua", {
+        year: "numeric",
+        month: "long",
+      });
+      const month = dateFormatter.format(date);
+
+      if (!acc[month]) {
+        acc[month] = { date: month };
+      }
+
+      Object.keys(item).forEach((key) => {
+        if (typeof item[key] === "number") {
+          acc[month][key] = (acc[month][key] || 0) + item[key];
+        }
+      });
+
+      return acc;
+    }, {});
+
+    return Object.values(months);
+  }
+
+  const years = data.reduce((acc: any, item) => {
     const date = new Date(transformDate(item.date));
     const dateFormatter = new Intl.DateTimeFormat("ua", {
       year: "numeric",
-      month: "long",
     });
-    const month = dateFormatter.format(date);
+    const year = dateFormatter.format(date);
 
-    if (!acc[month]) {
-      acc[month] = { date: month };
+    if (!acc[year]) {
+      acc[year] = { date: year };
     }
 
     Object.keys(item).forEach((key) => {
       if (typeof item[key] === "number") {
-        acc[month][key] = (acc[month][key] || 0) + item[key];
+        acc[year][key] = (acc[year][key] || 0) + item[key];
       }
     });
 
     return acc;
   }, {});
 
-  return Object.values(months);
+  return Object.values(years);
 }
